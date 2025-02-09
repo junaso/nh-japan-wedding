@@ -6,13 +6,20 @@ const globalStyles = css`
     font-family: "Arial", sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #ffffff;
     color: #333;
+    height: 100vh;
   }
+
   a {
     text-decoration: none;
-    color: #ff4081;
+    color: #ff4081 !important; /* 강제 적용 */
   }
+  
   a:hover {
     text-decoration: underline;
   }
