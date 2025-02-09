@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import styled from "@emotion/styled";
+import KakaoShareButton from "../components/KakaoShareButton";
 
 const Container = styled.div`
   text-align: center;
@@ -49,6 +50,7 @@ export default function Home() {
         <Link to="/gallery">갤러리</Link>
         <Link to="/guestbook">방명록</Link>
       </Nav>
+      <KakaoShareButton />
     </Container>
   );
 }
