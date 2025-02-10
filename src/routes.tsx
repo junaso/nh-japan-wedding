@@ -11,6 +11,7 @@ const router = createBrowserRouter([
   { path: "/location", element: <Location /> },
   { path: "/gallery", element: <Gallery /> },
   { path: "/guestbook", element: <Guestbook /> },
+  { path: "/share", element: <Guestbook /> },
 ]);
 
 export default function AppRouter() {
