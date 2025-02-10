@@ -4,6 +4,7 @@ import Invitation from "./pages/Invitation";
 import Location from "./pages/Location";
 import Gallery from "./pages/Gallery";
 import Guestbook from "./pages/Guestbook";
+import Share from "./pages/Share";
 
 const router = createBrowserRouter([
   { path: "/", element: <Home /> },
@@ -11,7 +12,7 @@ const router = createBrowserRouter([
   { path: "/location", element: <Location /> },
   { path: "/gallery", element: <Gallery /> },
   { path: "/guestbook", element: <Guestbook /> },
-  { path: "/share", element: <Guestbook /> },
+  { path: "/share", element: <Share /> },
 ]);
 
 export default function AppRouter() {
