@@ -1,0 +1,16 @@
+{
+  "rewrites": [
+    {
+      "source": "/share",
+      "destination": "/"
+    },
+    {
+      "source": "/invitation",
+      "destination": "/"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/"
+    }
+  ]
+}
