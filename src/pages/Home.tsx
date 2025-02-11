@@ -6,7 +6,7 @@ export default function Home() {
     <Container>
       <Title>Nam Jun &<br/>Heo Jieun</Title>
       <ImageContainer>
-        <img src="src\assets\image_04.webp" alt="Nam Jun & Heo Jieun" />
+        <img src="/image_04.webp" alt="Nam Jun & Heo Jieun" />
       </ImageContainer>
       <p>소중한 당신을 초대합니다.</p>
       <Nav>
