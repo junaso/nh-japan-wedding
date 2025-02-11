@@ -16,10 +16,10 @@ export const ImageContainer = styled.div`
   display: flex;
   justify-content: center;
   margin-top: 20px;
-  width: 70%; 
+  width: 80%; 
   margin: 0 auto; 
   img {
-    width: 100%; /* 부모 요소 크기에 맞춤 */
+    width: 100%;
     height: auto;
   }
 `;
