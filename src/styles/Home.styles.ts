@@ -10,6 +10,8 @@ export const Title = styled.h1`
   color:rgb(0, 0, 0);
   font-size: 24px;
   font-family: 'Newsreader', serif;
+  font-size: clamp(24px, 5vw, 50px); 
+  text-align: center;
 `;
 
 export const ImageContainer = styled.div`
