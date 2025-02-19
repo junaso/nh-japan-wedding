@@ -25,14 +25,14 @@ export const ImageContainer = styled.div`
 export const VerticalText = styled.div`
   font-size: clamp(15px, 2vw, 40px);
   white-space: nowrap;
-  color: #666; /* 회색 빛 추가 */
+  color: #888; /* 회색 빛 추가 */
   font-weight: bold;
   text-align: center;
   flex: 1;
 
   &.left {
     writing-mode: vertical-lr; /* 아래에서 위로 */
-    transform: rotate(180deg); /* 아래쪽이 오른쪽을 보도록 회전 */
+    // transform: rotate(180deg); /* 아래쪽이 오른쪽을 보도록 회전 */
   }
 
   &.right {
