@@ -1,12 +1,16 @@
 import { Link } from "react-router-dom";
-import { Container, Title, Nav, ImageContainer } from "../styles/Home.styles";
+import { Container, Title, Nav, ImageContainer, VerticalText, ImageWrapper } from "../styles/Home.styles";
 
 export default function Home() {
   return (
     <Container>
       <Title>Nam Jun &<br/>Heo Jieun</Title>
       <ImageContainer>
-        <img src="/image_04.webp" alt="Nam Jun & Heo Jieun" />
+        <VerticalText className="left">2025.05.16</VerticalText>
+        <ImageWrapper>
+          <img src="/image_04.webp" alt="Nam Jun & Heo Jieun" />
+        </ImageWrapper>
+        <VerticalText className="right">wedding day</VerticalText>
       </ImageContainer>
       <p>소중한 당신을 초대합니다.</p>
       <Nav>
@@ -18,4 +22,3 @@ export default function Home() {
     </Container>
   );
 }
-
