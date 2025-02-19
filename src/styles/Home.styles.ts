@@ -25,23 +25,27 @@ export const ImageContainer = styled.div`
 export const VerticalText = styled.div`
   font-size: clamp(15px, 2vw, 40px);
   white-space: nowrap;
-  color: #888; /* 회색 빛 추가 */
+  color: #888;
   font-weight: bold;
   text-align: center;
-  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 10%;
 
   &.left {
-    writing-mode: vertical-lr; /* 아래에서 위로 */
-    // transform: rotate(180deg); /* 아래쪽이 오른쪽을 보도록 회전 */
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    transform-origin: center;
   }
 
   &.right {
-    writing-mode: vertical-rl; /* 기존 방향 유지 */
+    writing-mode: vertical-rl;
   }
 `;
 
 export const ImageWrapper = styled.div`
-  flex: 8;
+  width: 80%;
   display: flex;
   justify-content: center;
 
