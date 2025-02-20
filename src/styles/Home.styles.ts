@@ -8,7 +8,7 @@ export const Container = styled.div`
 export const Title = styled.h1`
   color: rgb(0, 0, 0);
   font-family: 'Newsreader', serif;
-  font-size: clamp(18px, 4vw, 25px);
+  font-size: clamp(20px, 4vw, 25px);
   text-align: center;
 `;
 
@@ -87,7 +87,7 @@ export const OverlayText = styled.div`
   position: absolute;
   bottom: -20%; /* 기존 -10% → -15%로 내려서 더 아래로 배치 */
   color: #6A5ACD; /* 푸른 보라색 */
-  font-size: clamp(20px, 3vw, 40px);
+  font-size: clamp(25px, 5vw, 40px);
   font-family: 'Newsreader', serif;
   font-weight: bold;
   text-align: center;
