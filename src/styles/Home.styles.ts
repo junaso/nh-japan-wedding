@@ -8,7 +8,7 @@ export const Container = styled.div`
 export const Title = styled.h1`
   color: rgb(0, 0, 0);
   font-family: 'Newsreader', serif;
-  font-size: clamp(24px, 5vw, 50px);
+  font-size: clamp(18px, 4vw, 25px);
   text-align: center;
 `;
 
@@ -23,7 +23,7 @@ export const ImageContainer = styled.div`
 `;
 
 export const VerticalText = styled.div`
-  font-size: clamp(15px, 2vw, 40px);
+  font-size: clamp(10px, 1vw, 25px);
   white-space: nowrap;
   color: #888;
   font-weight: bold;
@@ -71,4 +71,36 @@ export const Nav = styled.nav`
     display: inline-block;
     text-align: center;
   }
+`;
+
+export const ImageBlock = styled.div`
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  max-width: 400px;
+`;
+
+export const OverlayText = styled.div`
+  position: absolute;
+  bottom: -20%; /* 기존 -10% → -15%로 내려서 더 아래로 배치 */
+  color: #6A5ACD; /* 푸른 보라색 */
+  font-size: clamp(20px, 3vw, 40px);
+  font-family: 'Newsreader', serif;
+  font-weight: bold;
+  text-align: center;
+  line-height: 1.3; /* 줄 간격을 조금 더 여유롭게 */
+  
+  span {
+    display: block; /* 각 단어를 새로운 줄로 */
+  }
+`;
+
+export const Subtitle = styled.p`
+  text-align: center;
+  font-size: clamp(16px, 2vw, 20px);
+  color: #333;
+  margin-top: 100px;
 `;
