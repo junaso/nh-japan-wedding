@@ -10,6 +10,7 @@ export const Title = styled.h1`
   font-family: 'Newsreader', serif;
   font-size: clamp(20px, 4vw, 25px);
   text-align: center;
+  margin-bottom: 40px;
 `;
 
 export const ImageContainer = styled.div`
@@ -31,7 +32,7 @@ export const VerticalText = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 10%;
+  width: 5%;
 
   &.left {
     writing-mode: vertical-lr;
@@ -45,14 +46,14 @@ export const VerticalText = styled.div`
 `;
 
 export const ImageWrapper = styled.div`
-  width: 80%;
+  width: 90%;
   display: flex;
   justify-content: center;
 
   img {
     width: 100%;
     height: auto;
-    max-width: 400px;
+    max-width: 450px;
   }
 `;
 
@@ -85,16 +86,16 @@ export const ImageBlock = styled.div`
 
 export const OverlayText = styled.div`
   position: absolute;
-  bottom: -20%; /* 기존 -10% → -15%로 내려서 더 아래로 배치 */
+  bottom: -15%;
   color: #6A5ACD; /* 푸른 보라색 */
   font-size: clamp(25px, 5vw, 40px);
   font-family: 'Newsreader', serif;
   font-weight: bold;
   text-align: center;
-  line-height: 1.3; /* 줄 간격을 조금 더 여유롭게 */
+  line-height: 1.3;
   
   span {
-    display: block; /* 각 단어를 새로운 줄로 */
+    display: block;
   }
 `;
 
