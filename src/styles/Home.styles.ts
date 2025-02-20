@@ -86,7 +86,7 @@ export const ImageBlock = styled.div`
 
 export const OverlayText = styled.div`
   position: absolute;
-  bottom: -15%;
+  bottom: -18%;
   color: #6A5ACD; /* 푸른 보라색 */
   font-size: clamp(30px, 6vw, 40px);
   font-family: 'Newsreader', serif;
