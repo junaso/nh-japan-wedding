@@ -88,7 +88,7 @@ export const OverlayText = styled.div`
   position: absolute;
   bottom: -15%;
   color: #6A5ACD; /* 푸른 보라색 */
-  font-size: clamp(25px, 5vw, 40px);
+  font-size: clamp(30px, 6vw, 40px);
   font-family: 'Newsreader', serif;
   font-weight: bold;
   text-align: center;
