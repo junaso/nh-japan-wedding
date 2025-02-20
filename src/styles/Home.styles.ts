@@ -23,7 +23,7 @@ export const ImageContainer = styled.div`
 `;
 
 export const VerticalText = styled.div`
-  font-size: clamp(10px, 1vw, 25px);
+  font-size: clamp(15px, 2vw, 25px);
   white-space: nowrap;
   color: #888;
   font-weight: bold;
