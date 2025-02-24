@@ -125,7 +125,7 @@ export const TextBlock = styled.p`
   color: #444;
   font-size: clamp(16px, 1.8vw, 18px);
   line-height: 1.6;
-  padding: 0 10%; 
+  padding: 0 5%; 
   font-family: "Gowun Batang", serif;
 `;
 
