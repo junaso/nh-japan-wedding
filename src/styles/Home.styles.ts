@@ -1,8 +1,20 @@
 import styled from "@emotion/styled";
 
 export const Container = styled.div`
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   background-color: #F7F2EC;
+  width: 100%;
+  min-height: 100vh;
+  padding: 20px 0;
+`;
+
+export const ContentWrapper = styled.div`
+  width: 90%;
+  max-width: 600px;
+  text-align: center;
 `;
 
 export const Title = styled.h1`
@@ -17,6 +29,7 @@ export const Divider = styled.div`
   width: 90%;
   border-top: 2px solid #999;
   margin: 30px auto; 
+  max-width: 600px;
 `;
 
 export const ImageContainer = styled.div`
@@ -38,6 +51,7 @@ export const VerticalText = styled.div`
   justify-content: center;
   align-items: center;
   width: 5%;
+  font-family: "Gowun Batang", serif;
 
   &.left {
     writing-mode: vertical-lr;
@@ -92,7 +106,7 @@ export const ImageBlock = styled.div`
 export const OverlayText = styled.div`
   position: absolute;
   bottom: -18%;
-  color: #6A5ACD; /* 푸른 보라색 */
+  color: #6A5ACD;
   font-size: clamp(30px, 6vw, 40px);
   font-family: 'Newsreader', serif;
   font-weight: bold;
@@ -104,8 +118,24 @@ export const OverlayText = styled.div`
   }
 `;
 
-export const Subtitle = styled.p`
-  text-align: center;
-  font-size: clamp(16px, 2vw, 20px);
-  color: #333;
+export const TextBlock = styled.p`
+  width: 100%;
+  max-width: 600px;
+  text-align: left;
+  color: #444;
+  font-size: clamp(16px, 1.8vw, 18px);
+  line-height: 1.6;
+  padding: 0 10%; 
+  font-family: "Gowun Batang", serif;
+`;
+
+export const SubTitle = styled.p`
+  width: 100%;
+  max-width: 600px;
+  text-align: left;
+  color: #6A5ACD;
+  font-size: clamp(20px, 1.8vw, 24px);
+  line-height: 1.6;
+  padding: 0 10%;
+  font-family: "Gowun Batang", serif;
 `;
