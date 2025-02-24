@@ -123,7 +123,7 @@ export const TextBlock = styled.p`
   max-width: 600px;
   text-align: left;
   color: #444;
-  font-size: clamp(16px, 1.8vw, 18px);
+  font-size: clamp(13px, 1.8vw, 18px);
   line-height: 1.6;
   padding: 0 5%; 
   font-family: "Gowun Batang", serif;
@@ -134,7 +134,7 @@ export const SubTitle = styled.p`
   max-width: 600px;
   text-align: left;
   color: #6A5ACD;
-  font-size: clamp(15px, 1.8vw, 24px);
+  font-size: clamp(18px, 1.8vw, 24px);
   line-height: 1.6;
   padding: 0 5%;
   font-family: "Gowun Batang", serif;
