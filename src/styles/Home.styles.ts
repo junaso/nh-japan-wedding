@@ -6,12 +6,10 @@ export const Container = styled.div`
   align-items: center;
   flex-direction: column;
   background-color: #F7F2EC;
-  width: 100%;
-  padding: 20px 0;
 `;
 
 export const ContentWrapper = styled.div`
-  width: 90%;
+  width: 100%;
   max-width: 600px;
   text-align: center;
 `;
@@ -35,9 +33,7 @@ export const ImageContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
-  max-width: 600px;
-  margin: 0 auto 100px; 
+  margin: 0 auto 120px; 
 `;
 
 export const VerticalText = styled.div`
@@ -64,14 +60,13 @@ export const VerticalText = styled.div`
 `;
 
 export const ImageWrapper = styled.div`
-  width: 90%;
+  width: 96%;
   display: flex;
   justify-content: center;
 
   img {
     width: 100%;
     height: auto;
-    max-width: 500px;
   }
 `;
 
@@ -98,15 +93,13 @@ export const ImageBlock = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 80%;
-  max-width: 400px;
 `;
 
 export const OverlayText = styled.div`
   position: absolute;
-  bottom: -18%;
+  bottom: -12%;
   color: #6A5ACD;
-  font-size: clamp(30px, 6vw, 40px);
+  font-size: clamp(30px, 6vw, 50px);
   font-family: 'Newsreader', serif;
   font-weight: bold;
   text-align: center;
@@ -118,8 +111,6 @@ export const OverlayText = styled.div`
 `;
 
 export const SubTitle = styled.p`
-  width: 100%;
-  max-width: 600px;
   text-align: left;
   color: #6A5ACD;
   font-size: clamp(18px, 1.8vw, 24px);
@@ -130,8 +121,6 @@ export const SubTitle = styled.p`
 `;
 
 export const TextBlock = styled.p`
-  width: 100%;
-  max-width: 600px;
   text-align: left;
   color: #444;
   font-size: clamp(15px, 1.8vw, 18px);

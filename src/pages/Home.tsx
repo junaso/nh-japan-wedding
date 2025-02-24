@@ -18,7 +18,6 @@ export default function Home() {
   return (
     <Container>
       <ContentWrapper>
-
         <Title>Nam Jun &<br />Heo Jieun</Title>
         <ImageContainer>
           <VerticalText className="left">2025.05.16</VerticalText>
@@ -34,11 +33,9 @@ export default function Home() {
           </ImageBlock>
           <VerticalText className="right">wedding day</VerticalText>
         </ImageContainer>
-
         <Divider />
         <SubTitle>
-          새로운 시작, <br />
-          그 설렘 가득 담아아<br />
+          새로운 시작, 그 설렘 가득 담아<br />
           소중한 분들에게<br /><br />
         </SubTitle>
 
@@ -59,6 +56,8 @@ export default function Home() {
           소중한 마음을 언제나 가슴 깊이 새기며,<br />
           감사함을 잊지 않고 살아가겠습니다.
         </TextBlock>
+
+        <Divider />
 
         <Nav>
           <Link to="/invitation">초대장 보기</Link>
