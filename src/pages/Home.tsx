@@ -12,30 +12,29 @@ import {
   Divider,
   TextBlock,
   SubTitle,
-  FirstPage
 } from "../styles/Home.styles";
 
 export default function Home() {
   return (
     <Container>
       <ContentWrapper>
-        <FirstPage>
-          <Title>Nam Jun &<br />Heo Jieun</Title>
-          <ImageContainer>
-            <VerticalText className="left">2025.05.16</VerticalText>
-            <ImageBlock>
-              <ImageWrapper>
-                <img src="/image_04.webp" alt="Nam Jun & Heo Jieun" />
-              </ImageWrapper>
-              <OverlayText>
-                <span>OUR</span>
-                <span>BEAUTIFUL</span>
-                <span>MOMENT</span>
-              </OverlayText>
-            </ImageBlock>
-            <VerticalText className="right">wedding day</VerticalText>
-          </ImageContainer>
-        </FirstPage>
+
+        <Title>Nam Jun &<br />Heo Jieun</Title>
+        <ImageContainer>
+          <VerticalText className="left">2025.05.16</VerticalText>
+          <ImageBlock>
+            <ImageWrapper>
+              <img src="/image_04.webp" alt="Nam Jun & Heo Jieun" />
+            </ImageWrapper>
+            <OverlayText>
+              <span>OUR</span>
+              <span>BEAUTIFUL</span>
+              <span>MOMENT</span>
+            </OverlayText>
+          </ImageBlock>
+          <VerticalText className="right">wedding day</VerticalText>
+        </ImageContainer>
+
         <Divider />
         <SubTitle>
           새로운 시작, <br />
@@ -49,9 +48,10 @@ export default function Home() {
           부부의 깊은 연으로 거듭나려 합니다.<br /><br />
 
           봄의 부드러운 온기가 꽃잎에 머무르는 5월, <br />
-          도쿄에서 가족들과 작은 결혼식을 올리게 되었습니다.<br /><br />
+          도쿄에서 가족들과 
+          작은 결혼식을 올리게 되었습니다.<br /><br />
 
-          늘 멀리서도 응원해주시고 아껴주시는 고마운 분들과<br />
+          늘 멀리서도 응원해주시는 고마운 분들과<br />
           함께하지 못하여 아쉬운 마음이 큽니다.<br /><br />
 
           그럼에도 저희 두 사람의 새로운 시작에 <br />

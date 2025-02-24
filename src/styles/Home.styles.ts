@@ -16,10 +16,6 @@ export const ContentWrapper = styled.div`
   text-align: center;
 `;
 
-export const FirstPage = styled.div`
-  min-height: 100%;
-`;
-
 export const Title = styled.h1`
   color: rgb(0, 0, 0);
   font-family: 'Newsreader', serif;
@@ -75,7 +71,7 @@ export const ImageWrapper = styled.div`
   img {
     width: 100%;
     height: auto;
-    max-width: 450px;
+    max-width: 500px;
   }
 `;
 
