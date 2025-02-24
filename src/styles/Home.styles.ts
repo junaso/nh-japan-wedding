@@ -15,8 +15,8 @@ export const Title = styled.h1`
 
 export const Divider = styled.div`
   width: 90%;
-  border-top: 2px solid black;
-  margin: 50px auto; /* 위아래 여백 */
+  border-top: 2px solid #999;
+  margin: 30px auto; 
 `;
 
 export const ImageContainer = styled.div`
@@ -25,9 +25,8 @@ export const ImageContainer = styled.div`
   justify-content: center;
   width: 100%;
   max-width: 600px;
-  margin: 0 auto 5%; 
+  margin: 0 auto 100px; 
 `;
-
 
 export const VerticalText = styled.div`
   font-size: clamp(15px, 2vw, 25px);
