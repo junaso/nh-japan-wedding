@@ -75,21 +75,26 @@ export default function Home() {
       touchEndY = event.changedTouches[0].clientY;
       const swipeDistance = touchStartY - touchEndY;
   
+      // 스와이프 감지 최소 거리 (50px 이상일 때만 작동)
+      if (Math.abs(swipeDistance) < 50) return;
+  
+      event.preventDefault(); // ✅ 기본 스크롤 이벤트 방지
+  
       const currentIndex = sectionsRef.current.findIndex(
         (section) => section && Math.abs(section.getBoundingClientRect().top) < 10
       );
   
       if (swipeDistance > 50 && currentIndex < sectionsRef.current.length - 1) {
-        sectionsRef.current[currentIndex + 1]?.scrollIntoView({ behavior: "smooth" });
+        window.scrollTo({ top: sectionsRef.current[currentIndex + 1]?.offsetTop, behavior: "smooth" });
       } else if (swipeDistance < -50 && currentIndex > 0) {
-        sectionsRef.current[currentIndex - 1]?.scrollIntoView({ behavior: "smooth" });
+        window.scrollTo({ top: sectionsRef.current[currentIndex - 1]?.offsetTop, behavior: "smooth" });
       }
     };
   
     window.addEventListener("wheel", handleScroll);
     window.addEventListener("keydown", handleScroll);
-    window.addEventListener("touchstart", handleTouchStart);
-    window.addEventListener("touchend", handleTouchEnd);
+    window.addEventListener("touchstart", handleTouchStart, { passive: false }); // ✅ 터치 이벤트 설정
+    window.addEventListener("touchend", handleTouchEnd, { passive: false });
   
     return () => {
       sectionsRef.current.forEach((section) => {
@@ -101,7 +106,7 @@ export default function Home() {
       window.removeEventListener("touchstart", handleTouchStart);
       window.removeEventListener("touchend", handleTouchEnd);
     };
-  }, []);
+  }, []);  
   
 
   return (
