@@ -59,7 +59,7 @@ export const VerticalText = styled.div`
 `;
 
 export const ImageWrapper = styled.div`
-  width: 90%;
+  width: 94%;
   display: flex;
   justify-content: center;
 
@@ -96,7 +96,7 @@ export const ImageBlock = styled.div`
 
 export const OverlayText = styled.div`
   position: absolute;
-  bottom: -12%;
+  bottom: -14%;
   color: #6A5ACD;
   font-size: clamp(30px, 6vw, 50px);
   font-family: 'Newsreader', serif;
