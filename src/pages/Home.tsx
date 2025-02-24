@@ -22,31 +22,59 @@ export default function Home() {
   useEffect(() => {
     const observerOptions = {
       root: null,
-      threshold: 0.5, // 50% 보이면 활성화
+      threshold: 0.5,
     };
-
+  
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          const targetElement = entry.target as HTMLElement; // ✅ HTMLElement로 변환
-          window.scrollTo({
-            top: targetElement.offsetTop,
-            behavior: "smooth",
-          });
+          const targetElement = entry.target as HTMLElement;
+          targetElement.scrollIntoView({ behavior: "smooth" });
         }
       });
     }, observerOptions);
-
+  
     sectionsRef.current.forEach((section) => {
       if (section) observer.observe(section);
     });
-
+  
+    const handleScroll = (event: WheelEvent | KeyboardEvent) => {
+      event.preventDefault();
+  
+      const currentIndex = sectionsRef.current.findIndex(
+        (section) => section?.getBoundingClientRect().top === 0
+      );
+  
+      if (event instanceof WheelEvent) {
+        if (event.deltaY > 0 && currentIndex < sectionsRef.current.length - 1) {
+          sectionsRef.current[currentIndex + 1]?.scrollIntoView({ behavior: "smooth" });
+        } else if (event.deltaY < 0 && currentIndex > 0) {
+          sectionsRef.current[currentIndex - 1]?.scrollIntoView({ behavior: "smooth" });
+        }
+      }
+  
+      if (event instanceof KeyboardEvent) {
+        if (event.key === "ArrowDown" && currentIndex < sectionsRef.current.length - 1) {
+          sectionsRef.current[currentIndex + 1]?.scrollIntoView({ behavior: "smooth" });
+        } else if (event.key === "ArrowUp" && currentIndex > 0) {
+          sectionsRef.current[currentIndex - 1]?.scrollIntoView({ behavior: "smooth" });
+        }
+      }
+    };
+  
+    window.addEventListener("wheel", handleScroll, { passive: false });
+    window.addEventListener("keydown", handleScroll);
+  
     return () => {
       sectionsRef.current.forEach((section) => {
         if (section) observer.unobserve(section);
       });
+  
+      window.removeEventListener("wheel", handleScroll);
+      window.removeEventListener("keydown", handleScroll);
     };
   }, []);
+  
 
   return (
     <Container>
