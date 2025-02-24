@@ -37,7 +37,7 @@ export const ImageContainer = styled.div`
 `;
 
 export const VerticalText = styled.div`
-  font-size: clamp(15px, 2vw, 25px);
+  font-size: clamp(18px, 2vw, 25px);
   white-space: nowrap;
   color: #888;
   font-weight: bold;
@@ -45,7 +45,6 @@ export const VerticalText = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 5%;
   font-family: "Gowun Batang", serif;
 
   &.left {
@@ -60,7 +59,7 @@ export const VerticalText = styled.div`
 `;
 
 export const ImageWrapper = styled.div`
-  width: 96%;
+  width: 90%;
   display: flex;
   justify-content: center;
 
