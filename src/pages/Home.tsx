@@ -8,7 +8,8 @@ import {
   ImageBlock, 
   ImageWrapper, 
   OverlayText, 
-  Subtitle 
+  Subtitle, 
+  Divider
 } from "../styles/Home.styles";
 
 export default function Home() {
@@ -29,7 +30,8 @@ export default function Home() {
         </ImageBlock>
         <VerticalText className="right">wedding day</VerticalText>
       </ImageContainer>
-      <Subtitle>소중한 당신을 초대합니다.</Subtitle> {/* 확실히 겹치지 않도록 아래로 이동 */}
+      <Divider />
+      <Subtitle>소중한 당신을 초대합니다.</Subtitle>
       <Nav>
         <Link to="/invitation">초대장 보기</Link>
         <Link to="/location">장소 안내</Link>

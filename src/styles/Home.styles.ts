@@ -13,15 +13,21 @@ export const Title = styled.h1`
   margin-bottom: 40px;
 `;
 
+export const Divider = styled.div`
+  width: 90%;
+  border-top: 2px solid black;
+  margin: 50px auto; /* 위아래 여백 */
+`;
+
 export const ImageContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 20px;
   width: 100%;
   max-width: 600px;
-  margin: 0 auto;
+  margin: 0 auto 5%; 
 `;
+
 
 export const VerticalText = styled.div`
   font-size: clamp(15px, 2vw, 25px);
@@ -103,5 +109,4 @@ export const Subtitle = styled.p`
   text-align: center;
   font-size: clamp(16px, 2vw, 20px);
   color: #333;
-  margin-top: 100px;
 `;
