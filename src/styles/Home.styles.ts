@@ -17,7 +17,7 @@ export const ContentWrapper = styled.div`
 `;
 
 export const FirstPage = styled.div`
-  min-height: 100vh;
+  min-height: 100%;
 `;
 
 export const Title = styled.h1`
