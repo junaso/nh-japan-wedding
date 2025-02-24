@@ -20,6 +20,9 @@ export default function Home() {
   const sectionsRef = useRef<(HTMLDivElement | null)[]>([]);
 
   useEffect(() => {
+    let touchStartY = 0;
+    let touchEndY = 0;
+  
     const observerOptions = {
       root: null,
       threshold: 0.5,
@@ -39,10 +42,12 @@ export default function Home() {
     });
   
     const handleScroll = (event: WheelEvent | KeyboardEvent) => {
-      event.preventDefault();
+      if (event instanceof KeyboardEvent) {
+        event.preventDefault();
+      }
   
       const currentIndex = sectionsRef.current.findIndex(
-        (section) => section?.getBoundingClientRect().top === 0
+        (section) => section && Math.abs(section.getBoundingClientRect().top) < 10
       );
   
       if (event instanceof WheelEvent) {
@@ -62,8 +67,29 @@ export default function Home() {
       }
     };
   
-    window.addEventListener("wheel", handleScroll, { passive: false });
+    const handleTouchStart = (event: TouchEvent) => {
+      touchStartY = event.touches[0].clientY;
+    };
+  
+    const handleTouchEnd = (event: TouchEvent) => {
+      touchEndY = event.changedTouches[0].clientY;
+      const swipeDistance = touchStartY - touchEndY;
+  
+      const currentIndex = sectionsRef.current.findIndex(
+        (section) => section && Math.abs(section.getBoundingClientRect().top) < 10
+      );
+  
+      if (swipeDistance > 50 && currentIndex < sectionsRef.current.length - 1) {
+        sectionsRef.current[currentIndex + 1]?.scrollIntoView({ behavior: "smooth" });
+      } else if (swipeDistance < -50 && currentIndex > 0) {
+        sectionsRef.current[currentIndex - 1]?.scrollIntoView({ behavior: "smooth" });
+      }
+    };
+  
+    window.addEventListener("wheel", handleScroll);
     window.addEventListener("keydown", handleScroll);
+    window.addEventListener("touchstart", handleTouchStart);
+    window.addEventListener("touchend", handleTouchEnd);
   
     return () => {
       sectionsRef.current.forEach((section) => {
@@ -72,6 +98,8 @@ export default function Home() {
   
       window.removeEventListener("wheel", handleScroll);
       window.removeEventListener("keydown", handleScroll);
+      window.removeEventListener("touchstart", handleTouchStart);
+      window.removeEventListener("touchend", handleTouchEnd);
     };
   }, []);
   
