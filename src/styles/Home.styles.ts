@@ -1,46 +1,5 @@
 import styled from "@emotion/styled";
 
-export const Container = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  background-color: #F7F2EC;
-  width: 100%;
-  min-height: 100vh;
-  padding: 20px 0;
-`;
-
-export const ContentWrapper = styled.div`
-  width: 90%;
-  max-width: 600px;
-  text-align: center;
-`;
-
-export const Title = styled.h1`
-  color: rgb(0, 0, 0);
-  font-family: 'Newsreader', serif;
-  font-size: clamp(20px, 4vw, 25px);
-  text-align: center;
-  margin-bottom: 40px;
-`;
-
-export const Divider = styled.div`
-  width: 95%;
-  border-top: 2px solid #999;
-  margin: 30px auto; 
-  max-width: 600px;
-`;
-
-export const ImageContainer = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  max-width: 600px;
-  margin: 0 auto 100px; 
-`;
-
 export const VerticalText = styled.div`
   font-size: clamp(15px, 2vw, 25px);
   white-space: nowrap;
@@ -116,6 +75,51 @@ export const OverlayText = styled.div`
   span {
     display: block;
   }
+`;
+
+export const Container = styled.div`
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  scroll-behavior: smooth;
+`;
+
+export const Section = styled.div`
+  width: 100%;
+  height: 100vh; /* 한 화면을 꽉 채우도록 설정 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
+export const ContentWrapper = styled.div`
+  width: 90%;
+  max-width: 600px;
+  text-align: center;
+`;
+
+export const Title = styled.h1`
+  color: rgb(0, 0, 0);
+  font-family: 'Newsreader', serif;
+  font-size: clamp(20px, 4vw, 25px);
+  text-align: center;
+  margin-bottom: 40px;
+`;
+
+export const Divider = styled.div`
+  width: 95%;
+  border-top: 2px solid #999;
+  margin: 30px auto; 
+  max-width: 600px;
+`;
+
+export const ImageContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
 `;
 
 export const SubTitle = styled.p`
