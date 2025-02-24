@@ -144,7 +144,7 @@ export const TwoColumnSection = styled.div`
 `;
 
 export const ImageSection = styled.div`
-  max-width: 230px;
+  max-width: 80%;
   img {
     width: 100%;
     border-radius: 5px;
