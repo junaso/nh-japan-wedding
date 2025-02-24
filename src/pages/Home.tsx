@@ -15,6 +15,8 @@ import {
   SectionContainer,
   TwoColumnSection,
   ImageSection,
+  TextChild,
+  TextParents,
   TextSection,
 } from "../styles/Home.styles";
 
@@ -69,27 +71,28 @@ export default function Home() {
               <img src="/image_01.jpg" alt="image_01.webp" />
             </ImageSection>
             <TextSection>
-              <p>
-                신랑 남준<br />
-                남원길・ 임경라 의 아들
-              </p>
+              <TextChild>
+                신랑 남준
+              </TextChild>
+              <TextParents>
+                남원길・임경라 의 아들
+              </TextParents>
             </TextSection>
           </TwoColumnSection>
-
           <TwoColumnSection>
-            <TextSection>
-              <p>
-                신부 허지은<br />
-                허기행・ 김순예 의 아들
-              </p>
-            </TextSection>
             <ImageSection>
               <img src="/image_02.jpg" alt="결혼식 준비" />
             </ImageSection>
+            <TextSection>
+              <TextChild>
+                신부 허지은
+              </TextChild>
+              <TextParents>
+                허기행・김순예 의 딸
+              </TextParents>
+            </TextSection>
           </TwoColumnSection>
         </SectionContainer>
-
-
 
         <Nav>
           <Link to="/invitation">초대장 보기</Link>
