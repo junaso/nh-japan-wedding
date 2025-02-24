@@ -118,17 +118,6 @@ export const OverlayText = styled.div`
   }
 `;
 
-export const TextBlock = styled.p`
-  width: 100%;
-  max-width: 600px;
-  text-align: left;
-  color: #444;
-  font-size: clamp(13px, 1.8vw, 18px);
-  line-height: 1.6;
-  padding: 0 5%; 
-  font-family: "Gowun Batang", serif;
-`;
-
 export const SubTitle = styled.p`
   width: 100%;
   max-width: 600px;
@@ -138,4 +127,17 @@ export const SubTitle = styled.p`
   line-height: 1.6;
   padding: 0 5%;
   font-family: "Gowun Batang", serif;
+  margin-bottom: 10px; 
+`;
+
+export const TextBlock = styled.p`
+  width: 100%;
+  max-width: 600px;
+  text-align: left;
+  color: #444;
+  font-size: clamp(15px, 1.8vw, 18px);
+  line-height: 1.6;
+  padding: 0 5%;
+  font-family: "Gowun Batang", serif;
+  margin-top: 0; 
 `;
