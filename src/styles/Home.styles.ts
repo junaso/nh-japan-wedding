@@ -129,3 +129,44 @@ export const TextBlock = styled.p`
   margin-top: 0; 
 `;
 
+export const SectionContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 0 5%;
+`;
+
+export const TwoColumnSection = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  
+  @media (min-width: 768px) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+`;
+
+export const ImageSection = styled.div`
+  flex: 1;
+  max-width: 300px;
+  
+  img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+`;
+
+export const TextSection = styled.div`
+  flex: 1;
+  text-align: left;
+  font-size: clamp(16px, 1.5vw, 18px);
+  color: #444;
+  line-height: 1.6;
+  font-family: "Gowun Batang", serif;
+`;

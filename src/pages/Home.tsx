@@ -12,6 +12,10 @@ import {
   Divider,
   TextBlock,
   SubTitle,
+  SectionContainer,
+  TwoColumnSection,
+  ImageSection,
+  TextSection,
 } from "../styles/Home.styles";
 
 export default function Home() {
@@ -45,7 +49,7 @@ export default function Home() {
           부부의 깊은 연으로 거듭나려 합니다.<br /><br />
 
           봄의 부드러운 온기가 꽃잎에 머무르는 5월, <br />
-          도쿄에서 가족들과 
+          도쿄에서 가족들과
           작은 결혼식을 올리게 되었습니다.<br /><br />
 
           늘 멀리서도 응원해주시는 고마운 분들과<br />
@@ -58,6 +62,34 @@ export default function Home() {
         </TextBlock>
 
         <Divider />
+
+        <SectionContainer>
+          <TwoColumnSection>
+            <ImageSection>
+              <img src="/image_01.jpg" alt="image_01.webp" />
+            </ImageSection>
+            <TextSection>
+              <p>
+                신랑 남준<br />
+                남원길・ 임경라 의 아들
+              </p>
+            </TextSection>
+          </TwoColumnSection>
+
+          <TwoColumnSection>
+            <TextSection>
+              <p>
+                신부 허지은<br />
+                허기행・ 김순예 의 아들
+              </p>
+            </TextSection>
+            <ImageSection>
+              <img src="/image_02.jpg" alt="결혼식 준비" />
+            </ImageSection>
+          </TwoColumnSection>
+        </SectionContainer>
+
+
 
         <Nav>
           <Link to="/invitation">초대장 보기</Link>
