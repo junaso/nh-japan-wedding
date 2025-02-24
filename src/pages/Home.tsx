@@ -1,8 +1,6 @@
 import { Link } from "react-router-dom";
-import { useEffect, useRef } from "react";
 import { 
   Container, 
-  Section, 
   ContentWrapper, 
   Title, 
   Nav, 
@@ -17,157 +15,58 @@ import {
 } from "../styles/Home.styles";
 
 export default function Home() {
-  const sectionsRef = useRef<(HTMLDivElement | null)[]>([]);
-
-  useEffect(() => {
-    let touchStartY = 0;
-    let touchEndY = 0;
-  
-    const observerOptions = {
-      root: null,
-      threshold: 0.5,
-    };
-  
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          const targetElement = entry.target as HTMLElement;
-          targetElement.scrollIntoView({ behavior: "smooth" });
-        }
-      });
-    }, observerOptions);
-  
-    sectionsRef.current.forEach((section) => {
-      if (section) observer.observe(section);
-    });
-  
-    const handleScroll = (event: WheelEvent | KeyboardEvent) => {
-      if (event instanceof KeyboardEvent) {
-        event.preventDefault();
-      }
-  
-      const currentIndex = sectionsRef.current.findIndex(
-        (section) => section && Math.abs(section.getBoundingClientRect().top) < 10
-      );
-  
-      if (event instanceof WheelEvent) {
-        if (event.deltaY > 0 && currentIndex < sectionsRef.current.length - 1) {
-          sectionsRef.current[currentIndex + 1]?.scrollIntoView({ behavior: "smooth" });
-        } else if (event.deltaY < 0 && currentIndex > 0) {
-          sectionsRef.current[currentIndex - 1]?.scrollIntoView({ behavior: "smooth" });
-        }
-      }
-  
-      if (event instanceof KeyboardEvent) {
-        if (event.key === "ArrowDown" && currentIndex < sectionsRef.current.length - 1) {
-          sectionsRef.current[currentIndex + 1]?.scrollIntoView({ behavior: "smooth" });
-        } else if (event.key === "ArrowUp" && currentIndex > 0) {
-          sectionsRef.current[currentIndex - 1]?.scrollIntoView({ behavior: "smooth" });
-        }
-      }
-    };
-  
-    const handleTouchStart = (event: TouchEvent) => {
-      touchStartY = event.touches[0].clientY;
-    };
-  
-    const handleTouchEnd = (event: TouchEvent) => {
-      touchEndY = event.changedTouches[0].clientY;
-      const swipeDistance = touchStartY - touchEndY;
-  
-      // 스와이프 감지 최소 거리 조정 (기존 50px → 30px)
-      if (Math.abs(swipeDistance) < 30) return;
-  
-      const currentIndex = sectionsRef.current.findIndex(
-        (section) => section && Math.abs(section.getBoundingClientRect().top) < 10
-      );
-  
-      if (swipeDistance > 30 && currentIndex < sectionsRef.current.length - 1) {
-        sectionsRef.current[currentIndex + 1]?.scrollIntoView({ behavior: "smooth" });
-      } else if (swipeDistance < -30 && currentIndex > 0) {
-        sectionsRef.current[currentIndex - 1]?.scrollIntoView({ behavior: "smooth" });
-      }
-    };
-  
-    window.addEventListener("wheel", handleScroll);
-    window.addEventListener("keydown", handleScroll);
-    window.addEventListener("touchstart", handleTouchStart);
-    window.addEventListener("touchend", handleTouchEnd);
-  
-    return () => {
-      sectionsRef.current.forEach((section) => {
-        if (section) observer.unobserve(section);
-      });
-  
-      window.removeEventListener("wheel", handleScroll);
-      window.removeEventListener("keydown", handleScroll);
-      window.removeEventListener("touchstart", handleTouchStart);
-      window.removeEventListener("touchend", handleTouchEnd);
-    };
-  }, []);  
-  
-
   return (
     <Container>
-      <Section ref={(el) => (sectionsRef.current[0] = el)}>
-        <ContentWrapper>
-          <Title>Nam Jun &<br/>Heo Jieun</Title>
-          
-          <ImageContainer>
-            <VerticalText className="left">2025.05.16</VerticalText>
-            <ImageBlock>
-              <ImageWrapper>
-                <img src="/image_04.webp" alt="Nam Jun & Heo Jieun" />
-              </ImageWrapper>
-              <OverlayText>
-                <span>OUR</span>
-                <span>BEAUTIFUL</span>
-                <span>MOMENT</span>
-              </OverlayText>
-            </ImageBlock>
-            <VerticalText className="right">wedding day</VerticalText>
-          </ImageContainer>
-        </ContentWrapper>
-      </Section>
+      <ContentWrapper>
+        <Title>Nam Jun &<br/>Heo Jieun</Title>
+        
+        <ImageContainer>
+          <VerticalText className="left">2025.05.16</VerticalText>
+          <ImageBlock>
+            <ImageWrapper>
+              <img src="/image_04.webp" alt="Nam Jun & Heo Jieun" />
+            </ImageWrapper>
+            <OverlayText>
+              <span>OUR</span>
+              <span>BEAUTIFUL</span>
+              <span>MOMENT</span>
+            </OverlayText>
+          </ImageBlock>
+          <VerticalText className="right">wedding day</VerticalText>
+        </ImageContainer>
 
-      <Section ref={(el) => (sectionsRef.current[1] = el)}>
-        <ContentWrapper>
-          <Divider />
-          <SubTitle>
-            새로운 시작, <br />
-            그 설렘 가득 담아<br />
-            소중한 분들에게<br /><br />
-          </SubTitle>
+        <Divider />
 
-          <TextBlock>
-            그동안 서로 의지하며 <br />
-            사랑을 키워 온 저희 두 사람이<br />
-            부부의 깊은 연으로 거듭나려 합니다.<br /><br />
+        <SubTitle>
+          새로운 시작, <br />
+          그 설렘 가득 담아아<br />
+          소중한 분들에게<br /><br />
+        </SubTitle>
 
-            봄의 부드러운 온기가 꽃잎에 머무르는 5월, <br />
-            도쿄에서 가족들과 작은 결혼식을 올리게 되었습니다.<br /><br />
+        <TextBlock>
+          그동안 서로 의지하며 <br />
+          사랑을 키워 온 저희 두 사람이<br />
+          부부의 깊은 연으로 거듭나려 합니다.<br /><br />
 
-            늘 멀리서도 응원해주시고 아껴주시는 고마운 분들과<br />
-            함께하지 못하여 아쉬운 마음이 큽니다.<br /><br />
+          봄의 부드러운 온기가 꽃잎에 머무르는 5월, <br />
+          도쿄에서 가족들과 작은 결혼식을 올리게 되었습니다.<br /><br />
 
-            그럼에도 저희 두 사람의 새로운 시작에 <br />
-            따뜻한 축복과 격려의 말씀을 보내주신다면, <br />
-            소중한 마음을 언제나 가슴 깊이 새기며,<br />
-            감사함을 잊지 않고 살아가겠습니다.
-          </TextBlock>
-        </ContentWrapper>
-      </Section>
+          늘 멀리서도 응원해주시고 아껴주시는 고마운 분들과<br />
+          함께하지 못하여 아쉬운 마음이 큽니다.<br /><br />
 
-      <Section ref={(el) => (sectionsRef.current[2] = el)}>
-        <ContentWrapper>
-          <Nav>
-            <Link to="/invitation">초대장 보기</Link>
-            <Link to="/location">장소 안내</Link>
-            <Link to="/gallery">갤러리</Link>
-            <Link to="/guestbook">방명록</Link>
-          </Nav>
-        </ContentWrapper>
-      </Section>
+          그럼에도 저희 두 사람의 새로운 시작에 <br />
+          따뜻한 축복과 격려의 말씀을 보내주신다면, <br />
+          소중한 마음을 언제나 가슴 깊이 새기며,<br />
+          감사함을 잊지 않고 살아가겠습니다.
+        </TextBlock>
+
+        <Nav>
+          <Link to="/invitation">초대장 보기</Link>
+          <Link to="/location">장소 안내</Link>
+          <Link to="/gallery">갤러리</Link>
+          <Link to="/guestbook">방명록</Link>
+        </Nav>
+      </ContentWrapper>
     </Container>
   );
 }
