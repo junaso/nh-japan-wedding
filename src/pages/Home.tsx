@@ -1,42 +1,42 @@
 import { Link } from "react-router-dom";
-import { 
-  Container, 
-  ContentWrapper, 
-  Title, 
-  Nav, 
-  ImageContainer, 
-  VerticalText, 
-  ImageBlock, 
-  ImageWrapper, 
-  OverlayText, 
-  Divider, 
+import {
+  Container,
+  ContentWrapper,
+  Title,
+  Nav,
+  ImageContainer,
+  VerticalText,
+  ImageBlock,
+  ImageWrapper,
+  OverlayText,
+  Divider,
   TextBlock,
-  SubTitle
+  SubTitle,
+  FirstPage
 } from "../styles/Home.styles";
 
 export default function Home() {
   return (
     <Container>
       <ContentWrapper>
-        <Title>Nam Jun &<br/>Heo Jieun</Title>
-        
-        <ImageContainer>
-          <VerticalText className="left">2025.05.16</VerticalText>
-          <ImageBlock>
-            <ImageWrapper>
-              <img src="/image_04.webp" alt="Nam Jun & Heo Jieun" />
-            </ImageWrapper>
-            <OverlayText>
-              <span>OUR</span>
-              <span>BEAUTIFUL</span>
-              <span>MOMENT</span>
-            </OverlayText>
-          </ImageBlock>
-          <VerticalText className="right">wedding day</VerticalText>
-        </ImageContainer>
-
+        <FirstPage>
+          <Title>Nam Jun &<br />Heo Jieun</Title>
+          <ImageContainer>
+            <VerticalText className="left">2025.05.16</VerticalText>
+            <ImageBlock>
+              <ImageWrapper>
+                <img src="/image_04.webp" alt="Nam Jun & Heo Jieun" />
+              </ImageWrapper>
+              <OverlayText>
+                <span>OUR</span>
+                <span>BEAUTIFUL</span>
+                <span>MOMENT</span>
+              </OverlayText>
+            </ImageBlock>
+            <VerticalText className="right">wedding day</VerticalText>
+          </ImageContainer>
+        </FirstPage>
         <Divider />
-
         <SubTitle>
           새로운 시작, <br />
           그 설렘 가득 담아아<br />

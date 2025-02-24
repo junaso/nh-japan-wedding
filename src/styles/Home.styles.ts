@@ -17,6 +17,10 @@ export const ContentWrapper = styled.div`
   text-align: center;
 `;
 
+export const FirstPage = styled.div`
+  min-height: 100vh;
+`;
+
 export const Title = styled.h1`
   color: rgb(0, 0, 0);
   font-family: 'Newsreader', serif;
@@ -141,3 +145,4 @@ export const TextBlock = styled.p`
   font-family: "Gowun Batang", serif;
   margin-top: 0; 
 `;
+
