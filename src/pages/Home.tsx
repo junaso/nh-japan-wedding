@@ -61,7 +61,7 @@ export default function Home() {
 
         <SubTitle>
           새로운 시작, 그 설렘 가득 담아<br />
-          소중한 분들에게<br /><br />
+          소중한 분들에게<br />
         </SubTitle>
 
         <TextBlock>
