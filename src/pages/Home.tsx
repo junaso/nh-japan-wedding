@@ -1,9 +1,7 @@
-import { Link } from "react-router-dom";
 import {
   Container,
   ContentWrapper,
   Title,
-  Nav,
   ImageContainer,
   VerticalText,
   ImageBlock,
@@ -18,6 +16,7 @@ import {
   TextChild,
   TextParents,
   TextSection,
+  FinalNote,
 } from "../styles/Home.styles";
 import ImageGrid from "../components/Gallery";
 
@@ -26,6 +25,7 @@ export default function Home() {
     <Container>
       <ContentWrapper>
         <Title>Nam Jun &<br />Heo Jieun</Title>
+
         <ImageContainer>
           <VerticalText className="left">2025.05.16</VerticalText>
           <ImageBlock>
@@ -39,7 +39,9 @@ export default function Home() {
           </ImageBlock>
           <VerticalText className="right">wedding day</VerticalText>
         </ImageContainer>
+
         <Divider />
+
         <SubTitle>
           새로운 시작, 그 설렘 가득 담아<br />
           소중한 분들에게<br /><br />
@@ -96,12 +98,13 @@ export default function Home() {
 
         <ImageGrid/>
 
-        <Nav>
-          <Link to="/invitation">초대장 보기</Link>
-          <Link to="/location">장소 안내</Link>
-          <Link to="/gallery">갤러리</Link>
-          <Link to="/guestbook">방명록</Link>
-        </Nav>
+        <Divider />
+
+        <FinalNote>
+          이와 같은 순간들,<br />
+          서로 나란히 기대어 있는 것만으로,
+        </FinalNote>
+
       </ContentWrapper>
     </Container>
   );

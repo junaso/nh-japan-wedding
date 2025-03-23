@@ -25,7 +25,7 @@ export const Title = styled.h1`
 export const Divider = styled.div`
   width: 95%;
   border-top: 2px solid #999;
-  margin: 30px auto; 
+  margin: 20px auto; 
   max-width: 600px;
 `;
 
@@ -171,4 +171,13 @@ export const TextParents = styled.div`
   font-family: "Gowun Batang", serif;
   margin-left: 10%;
 `;
+
+export const FinalNote = styled.div`
+  font-family: 'Gowun Batang', serif;
+  font-size: clamp(18px, 2vw, 22px);
+  color: #6A5ACD;
+  text-align: center;
+  margin: 40px 0;
+`;
+
 

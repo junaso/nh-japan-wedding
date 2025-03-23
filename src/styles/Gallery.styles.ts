@@ -37,7 +37,6 @@ export const ModalOverlay = styled.div`
 export const ModalImage = styled.img`
   max-width: 90%;
   max-height: 90%;
-  border-radius: 8px;
 `;
 
 export const CloseButton = styled.button`
