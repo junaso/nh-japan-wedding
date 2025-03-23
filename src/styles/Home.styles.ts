@@ -15,11 +15,11 @@ export const ContentWrapper = styled.div`
 `;
 
 export const Title = styled.h1`
-  color: rgb(0, 0, 0);
-  font-family: 'Newsreader', serif;
+  color: #000;
+  font-family: "Gowun Batang", serif;
   font-size: clamp(20px, 4vw, 25px);
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 `;
 
 export const Divider = styled.div`

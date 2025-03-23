@@ -41,7 +41,7 @@ export default function Home() {
   return (
     <Container>
       <ContentWrapper>
-        <Title>Nam Jun &<br />Heo Jieun</Title>
+        <Title>Nam Jun & Heo Jieun</Title>
 
         <ImageContainer>
           <VerticalText className="left">2025.05.16</VerticalText>
