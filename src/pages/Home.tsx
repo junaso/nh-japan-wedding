@@ -16,11 +16,28 @@ import {
   TextChild,
   TextParents,
   TextSection,
-  FinalNote,
+  GallaryTitle,
 } from "../styles/Home.styles";
 import ImageGrid from "../components/Gallery";
+import AccountInfo from "../components/AccountInfo";
 
 export default function Home() {
+
+  const accounts = [
+    {
+      label: "신랑 측",
+      bank: "국민은행",
+      number: "123456-78-90123",
+      name: "남준"
+    },
+    {
+      label: "신부 측",
+      bank: "우리은행",
+      number: "1002-123-456789",
+      name: "허지은"
+    }
+  ];
+
   return (
     <Container>
       <ContentWrapper>
@@ -65,12 +82,10 @@ export default function Home() {
           감사함을 잊지 않고 살아가겠습니다.
         </TextBlock>
 
-        <Divider />
-
         <SectionContainer>
           <TwoColumnSection>
             <ImageSection>
-              <img src="/image_01.jpg" alt="image_01.webp" />
+              <img src="/nam_child.jpg" alt="image_01.webp" />
             </ImageSection>
             <TextSection>
               <TextChild>
@@ -83,7 +98,7 @@ export default function Home() {
           </TwoColumnSection>
           <TwoColumnSection>
             <ImageSection>
-              <img src="/image_02.jpg" alt="결혼식 준비" />
+              <img src="/heo_child.jpg" alt="결혼식 준비" />
             </ImageSection>
             <TextSection>
               <TextChild>
@@ -96,14 +111,24 @@ export default function Home() {
           </TwoColumnSection>
         </SectionContainer>
 
-        <ImageGrid/>
+        <Divider />
+
+        <GallaryTitle>
+          이와 같은 순간들,<br />
+          나란히 기대어 있는 것만으로,
+        </GallaryTitle>
+
+        <ImageGrid />
 
         <Divider />
 
-        <FinalNote>
-          이와 같은 순간들,<br />
-          서로 나란히 기대어 있는 것만으로,
-        </FinalNote>
+        <AccountInfo accounts={accounts} />
+
+        <Divider />
+
+        <GallaryTitle>
+          Mean Everything
+        </GallaryTitle>
 
       </ContentWrapper>
     </Container>

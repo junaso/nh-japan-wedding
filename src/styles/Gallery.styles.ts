@@ -5,7 +5,7 @@ export const GridSection = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
-  padding: 20px 5%;
+  padding: 10px 5%;
 `;
 
 export const GridImage = styled.img`

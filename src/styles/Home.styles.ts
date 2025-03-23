@@ -172,12 +172,12 @@ export const TextParents = styled.div`
   margin-left: 10%;
 `;
 
-export const FinalNote = styled.div`
+export const GallaryTitle = styled.div`
   font-family: 'Gowun Batang', serif;
   font-size: clamp(18px, 2vw, 22px);
   color: #6A5ACD;
   text-align: center;
-  margin: 40px 0;
+  margin: 20px 0;
 `;
 
 
