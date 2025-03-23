@@ -2,7 +2,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./pages/Home";
 import Invitation from "./pages/Invitation";
 import Location from "./pages/Location";
-import Gallery from "./pages/Gallery";
+import Gallery from "./components/Gallery";
 import Guestbook from "./pages/Guestbook";
 import Share from "./pages/Share";
 

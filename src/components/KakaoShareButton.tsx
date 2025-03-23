@@ -2,7 +2,7 @@ const KakaoShareButton = () => {
 
   const shareKakao = () => {
     window.Kakao.Link.sendCustom({
-      templateId: 117184, // 내가 만든 템플릿 아이디를 넣어주면 된다
+      templateId: 117184,
     });
   };
 

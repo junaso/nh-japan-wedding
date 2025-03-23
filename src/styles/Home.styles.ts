@@ -96,7 +96,7 @@ export const ImageBlock = styled.div`
 
 export const OverlayText = styled.div`
   position: absolute;
-  bottom: -14%;
+  bottom: -11%;
   color: #6A5ACD;
   font-size: clamp(30px, 6vw, 50px);
   font-family: 'Newsreader', serif;
@@ -152,14 +152,16 @@ export const ImageSection = styled.div`
 `;
 
 export const TextSection = styled.div`
+  width: 100%;
 `;
 
 export const TextChild = styled.div`
   text-align: left;
-  font-size: clamp(20px, 1.5vw, 24px);
+  font-weight: bold;
+  font-size: clamp(16px, 1.5vw, 18px);
   color: #6A5ACD;
   font-family: "Gowun Batang", serif;
-  font-weight: bold;
+  margin-left: 10%;
 `;
 
 export const TextParents = styled.div`
@@ -167,5 +169,6 @@ export const TextParents = styled.div`
   font-size: clamp(16px, 1.5vw, 18px);
   color: #444;
   font-family: "Gowun Batang", serif;
+  margin-left: 10%;
 `;
 

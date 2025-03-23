@@ -19,6 +19,7 @@ import {
   TextParents,
   TextSection,
 } from "../styles/Home.styles";
+import ImageGrid from "../components/Gallery";
 
 export default function Home() {
   return (
@@ -29,12 +30,11 @@ export default function Home() {
           <VerticalText className="left">2025.05.16</VerticalText>
           <ImageBlock>
             <ImageWrapper>
-              <img src="/image_04.webp" alt="Nam Jun & Heo Jieun" />
+              <img src="/main_01.JPG" alt="Nam Jun & Heo Jieun" />
             </ImageWrapper>
             <OverlayText>
-              <span>OUR</span>
-              <span>BEAUTIFUL</span>
-              <span>MOMENT</span>
+              <span>MOMENTS</span>
+              <span>LIKE THIS</span>
             </OverlayText>
           </ImageBlock>
           <VerticalText className="right">wedding day</VerticalText>
@@ -58,8 +58,8 @@ export default function Home() {
           함께하지 못하여 아쉬운 마음이 큽니다.<br /><br />
 
           그럼에도 저희 두 사람의 새로운 시작에 <br />
-          따뜻한 축복과 격려의 말씀을 보내주신다면, <br />
-          소중한 마음을 언제나 가슴 깊이 새기며,<br />
+          따뜻하게 축복하고 격려해 주신다면, <br />
+          소중한 마음 언제나 가슴 깊이 새기며,<br />
           감사함을 잊지 않고 살아가겠습니다.
         </TextBlock>
 
@@ -93,6 +93,8 @@ export default function Home() {
             </TextSection>
           </TwoColumnSection>
         </SectionContainer>
+
+        <ImageGrid/>
 
         <Nav>
           <Link to="/invitation">초대장 보기</Link>
