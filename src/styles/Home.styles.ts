@@ -24,8 +24,8 @@ export const Title = styled.h1`
 
 export const Divider = styled.div`
   width: 95%;
-  border-top: 2px solid #999;
-  margin: 20px auto; 
+  border-top: 2px solid #777;
+  margin: 30px auto; 
   max-width: 600px;
 `;
 
@@ -33,7 +33,7 @@ export const ImageContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto 120px; 
+  margin: 0 auto 100px; 
 `;
 
 export const VerticalText = styled.div`
