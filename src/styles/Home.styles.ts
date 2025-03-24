@@ -25,7 +25,7 @@ export const Title = styled.h1`
 
 export const Divider = styled.div`
   width: 95%;
-  border-top: 2px solid #777;
+  border-top: 1px solid #777;
   margin: 30px auto; 
   max-width: 600px;
 `;
