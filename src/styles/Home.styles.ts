@@ -34,7 +34,7 @@ export const ImageContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto 100px; 
+  margin: 0 auto 90px; 
 `;
 
 export const VerticalText = styled.div`
@@ -187,5 +187,5 @@ export const FooterCopyright = styled.div`
   color: #aaa;
   text-align: center;
   font-family: 'Gowun Batang', serif;
-  margin: 40px 0 20px;
+  margin: 10px 0 20px;
 `;
