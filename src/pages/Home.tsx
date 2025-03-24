@@ -17,6 +17,7 @@ import {
   TextParents,
   TextSection,
   GallaryTitle,
+  FooterCopyright,
 } from "../styles/Home.styles";
 import ImageGrid from "../components/Gallery";
 import AccountInfo from "../components/AccountInfo";
@@ -44,7 +45,7 @@ export default function Home() {
         <Title>Nam Jun & Heo Jieun</Title>
 
         <ImageContainer>
-          <VerticalText className="left">2025.05.16</VerticalText>
+          <VerticalText className="left">2025.05.16. 1:00 P.M. Tokyo</VerticalText>
           <ImageBlock>
             <ImageWrapper>
               <img src="/main_01.JPG" alt="Nam Jun & Heo Jieun" />
@@ -54,17 +55,18 @@ export default function Home() {
               <span>LIKE THIS</span>
             </OverlayText>
           </ImageBlock>
-          <VerticalText className="right">wedding day</VerticalText>
+          <VerticalText className="right">Our wedding day</VerticalText>
         </ImageContainer>
 
         <Divider />
 
         <SubTitle>
           새로운 시작, 그 설렘 가득 담아<br />
-          소중한 분들에게<br />
+          소중한 분들에게
         </SubTitle>
 
         <TextBlock>
+          <br />
           그동안 서로 의지하며 <br />
           사랑을 키워 온 저희 두 사람이<br />
           부부의 깊은 연으로 거듭나려 합니다.<br /><br />
@@ -115,7 +117,7 @@ export default function Home() {
 
         <GallaryTitle>
           이와 같은 순간들,<br />
-          나란히 기대어 있는 것만으로,
+          나란히 기대어 있는 것만으로
         </GallaryTitle>
 
         <ImageGrid />
@@ -129,6 +131,10 @@ export default function Home() {
         <GallaryTitle>
           Mean Everything
         </GallaryTitle>
+
+        <FooterCopyright>
+          ⓒ 2025 Nam Jun & Heo Jieun. All rights reserved.
+        </FooterCopyright>
 
       </ContentWrapper>
     </Container>

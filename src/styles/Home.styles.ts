@@ -38,7 +38,7 @@ export const ImageContainer = styled.div`
 `;
 
 export const VerticalText = styled.div`
-  font-size: clamp(18px, 2vw, 25px);
+  font-size: clamp(16px, 2vw, 23px);
   white-space: nowrap;
   color: #888;
   font-weight: bold;
@@ -128,6 +128,7 @@ export const TextBlock = styled.p`
   padding: 0 5%;
   font-family: "Gowun Batang", serif;
   margin-top: 0; 
+  margin-bottom: 40px; 
 `;
 
 export const SectionContainer = styled.div`
@@ -181,4 +182,10 @@ export const GallaryTitle = styled.div`
   margin: 20px 0;
 `;
 
-
+export const FooterCopyright = styled.div`
+  font-size: 14px;
+  color: #aaa;
+  text-align: center;
+  font-family: 'Gowun Batang', serif;
+  margin: 40px 0 20px;
+`;
