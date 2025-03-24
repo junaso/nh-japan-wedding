@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import colors from "./colors";
 
 export const Container = styled.div`
   display: flex;
@@ -96,8 +97,8 @@ export const ImageBlock = styled.div`
 
 export const OverlayText = styled.div`
   position: absolute;
-  bottom: -11%;
-  color: #6A5ACD;
+  bottom: -8%;
+  color: ${colors.mainColor};
   font-size: clamp(30px, 6vw, 50px);
   font-family: 'Newsreader', serif;
   font-weight: bold;
@@ -111,7 +112,7 @@ export const OverlayText = styled.div`
 
 export const SubTitle = styled.p`
   text-align: left;
-  color: #6A5ACD;
+  color: ${colors.mainColor};
   font-size: clamp(18px, 1.8vw, 24px);
   line-height: 1.6;
   padding: 0 5%;
@@ -159,7 +160,7 @@ export const TextChild = styled.div`
   text-align: left;
   font-weight: bold;
   font-size: clamp(16px, 1.5vw, 18px);
-  color: #6A5ACD;
+  color: ${colors.mainColor};
   font-family: "Gowun Batang", serif;
   margin-left: 10%;
 `;
@@ -175,7 +176,7 @@ export const TextParents = styled.div`
 export const GallaryTitle = styled.div`
   font-family: 'Gowun Batang', serif;
   font-size: clamp(18px, 2vw, 22px);
-  color: #6A5ACD;
+  color: ${colors.mainColor};
   text-align: center;
   margin: 20px 0;
 `;

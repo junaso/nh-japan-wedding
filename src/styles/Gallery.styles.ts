@@ -1,6 +1,5 @@
 import styled from "@emotion/styled";
 
-// Styled Components
 export const GridSection = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
