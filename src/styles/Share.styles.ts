@@ -25,5 +25,5 @@ export const ButtonContainer = styled.div`
   align-items: center;
   justify-content: center;
   height: 100vh; 
-  gap: 10px;
+  gap: 40px;
 `;
