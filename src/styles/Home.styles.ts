@@ -207,7 +207,7 @@ export const TextParents = styled.div`
 
 export const TextParentsJapan = styled.div`
   text-align: left;
-  font-size: clamp(14px, 1.3vw, 16px);
+  font-size: clamp(12px, 1.3vw, 14px);
   color: #444;
   font-family: ${fonts.japanese};
   margin-left: 10%;
@@ -216,6 +216,14 @@ export const TextParentsJapan = styled.div`
 export const GallaryTitle = styled.div`
   font-family: ${fonts.korean};
   font-size: clamp(18px, 2vw, 22px);
+  color: ${colors.mainColor};
+  text-align: center;
+  margin: 20px 0;
+`;
+
+export const RegretMassage = styled.div`
+  font-family: ${fonts.korean};
+  font-size: clamp(14px, 1.6vw, 18px);
   color: ${colors.mainColor};
   text-align: center;
   margin: 20px 0;
@@ -243,9 +251,9 @@ export const CenteredImage = styled.div`
   margin: 0 10%;
 
   img {
-    max-width: 100%;
+    max-width: 90%;
     height: auto;
-    border-radius: 3px; // 선택 사항: 살짝 둥글게
+    border-radius: 6px; // 선택 사항: 살짝 둥글게
   }
 `;
 

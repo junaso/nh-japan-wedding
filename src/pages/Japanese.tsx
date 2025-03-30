@@ -82,7 +82,7 @@ export default function japanese() {
                 新郎　南　俊
               </TextChildJapn>
               <TextParentsJapan>
-                南　元吉・林　景羅の長男
+                南元吉・林景羅の長男
               </TextParentsJapan>
             </TextSection>
           </TwoColumnSection>
@@ -95,7 +95,7 @@ export default function japanese() {
                 新婦　許　智銀
               </TextChildJapn>
               <TextParentsJapan>
-                許　基行・金　順禮の長女
+                許基行・金順禮の長女
               </TextParentsJapan>
             </TextSection>
           </TwoColumnSection>

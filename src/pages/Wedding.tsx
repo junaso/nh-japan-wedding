@@ -19,6 +19,7 @@ import {
   GallaryTitle,
   FooterCopyright,
   CenteredImage,
+  RegretMassage,
 } from "../styles/Home.styles";
 import ImageGrid from "../components/Gallery";
 
@@ -109,11 +110,11 @@ export default function Wedding() {
 
         <Divider />
 
-        <GallaryTitle>
+        <RegretMassage>
           저희 두 사람의 시작을<br />
           마음으로 함께 축하해주시면 감사하겠습니다.<br />
           축의금은 정중히 사양드립니다.
-        </GallaryTitle>
+        </RegretMassage>
 
         <CenteredImage>
           <img src="/kakao.png" alt="감사의 마음" />
