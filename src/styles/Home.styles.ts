@@ -189,3 +189,16 @@ export const FooterCopyright = styled.div`
   font-family: 'Gowun Batang', serif;
   margin: 10px 0 20px;
 `;
+
+export const CenteredImage = styled.div`
+  display: flex;
+  justify-content: center;
+  margin: 0 10%;
+
+  img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 3px; // 선택 사항: 살짝 둥글게
+  }
+`;
+
