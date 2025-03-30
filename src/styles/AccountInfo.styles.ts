@@ -8,11 +8,19 @@ export const AccountContainer = styled.div`
   padding: 0 5%;
 `;
 
+export const AccountMainTitle = styled.div`
+  font-family: 'Gowun Batang', serif;
+  color: ${colors.mainColor};
+  font-size: clamp(16px, 1.8vw, 20px);
+  margin-bottom: 20px;
+`;
+
 export const AccountLabel = styled.div`
   font-family: 'Gowun Batang', serif;
   color: ${colors.mainColor};
   font-size: clamp(16px, 1.8vw, 20px);
   margin-bottom: 20px;
+  text-align: left;
 `;
 
 export const AccountFlexWrapper = styled.div`
@@ -29,11 +37,20 @@ export const AccountFlexWrapper = styled.div`
 
 export const AccountBlock = styled.div`
   flex: 1;
-  min-width: 220px;
-  max-width: 280px;
+  width-min: 180px;
+  width-max: 200px;
   background-color: #f2f0ec;
   border-radius: 8px;
+  margin-top: 10px;
   padding: 16px;
+`;
+
+export const AccountItemBox = styled.div`
+  background-color: #FAF8F5;
+  border-radius: 12px;
+  padding: 15px;
+  margin-top: 12px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 `;
 
 export const AccountTitle = styled.div`
@@ -72,7 +89,7 @@ export const CopyButton = styled.button`
   font-size: clamp(12px, 1vw, 14px);
 
   &:hover {
-    background-color: #5a4fcf;
+    background-color: ${colors.hoverColor};
   }
 `;
 
@@ -80,5 +97,11 @@ export const AccountHeader = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 10px;
+`;
+
+export const AccountHolder = styled.span`
+  color: #6699cc;
+  font-weight: bold;
+  font-family: 'Gowun Batang', serif;
+  font-size: clamp(12px, 1vw, 14px);
 `;

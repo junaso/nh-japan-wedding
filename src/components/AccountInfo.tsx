@@ -4,10 +4,13 @@ import {
   AccountFlexWrapper,
   AccountHeader,
   AccountLabel,
+  AccountMainTitle,
   AccountName,
   AccountText,
   AccountTitle,
   CopyButton,
+  AccountItemBox,
+  AccountHolder, // 추가: 내부 박스를 위한 스타일
 } from "../styles/AccountInfo.styles";
 
 type AccountProps = {
@@ -26,7 +29,6 @@ const copyToClipboard = (text: string) => {
   alert("계좌번호가 복사되었습니다!");
 };
 
-// label 기준으로 계좌들을 그룹화하는 함수
 const groupByLabel = (accounts: AccountProps[]) => {
   const grouped: { [label: string]: AccountProps[] } = {};
   accounts.forEach((acc) => {
@@ -43,22 +45,29 @@ const AccountInfo = ({ accounts }: Props) => {
 
   return (
     <AccountContainer>
+      <AccountMainTitle>마음 전하실 곳</AccountMainTitle>
       {Object.entries(groupedAccounts).map(([label, accList]) => (
         <div key={label}>
-          <AccountLabel>{label}</AccountLabel>
           <AccountFlexWrapper>
-            {accList.map((acc, index) => (
-              <AccountBlock key={index}>
-                <AccountHeader>
-                  <AccountTitle>{acc.bank}</AccountTitle>
-                  <CopyButton onClick={() => copyToClipboard(acc.number)}>
-                    복사하기
-                  </CopyButton>
-                </AccountHeader>
-                <AccountText>{acc.number}</AccountText>
-                <AccountName>예금주: {acc.name}</AccountName>
-              </AccountBlock>
-            ))}
+            <AccountBlock>
+              <AccountLabel>{label}</AccountLabel>
+
+              {/* 내부 박스들 */}
+              {accList.map((acc, index) => (
+                <AccountItemBox key={index}>
+                  <AccountHeader>
+                    <AccountText>
+                      {acc.bank} {acc.number}
+                      <br />
+                      <AccountHolder>예금주: {acc.name}</AccountHolder>
+                    </AccountText>
+                    <CopyButton onClick={() => copyToClipboard(acc.number)}>
+                      복사하기
+                    </CopyButton>
+                  </AccountHeader>
+                </AccountItemBox>
+              ))}
+            </AccountBlock>
           </AccountFlexWrapper>
         </div>
       ))}
