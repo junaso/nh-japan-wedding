@@ -25,18 +25,10 @@ import AccountInfo from "../components/AccountInfo";
 export default function Home() {
 
   const accounts = [
-    {
-      label: "신랑 측",
-      bank: "국민은행",
-      number: "123456-78-90123",
-      name: "남준"
-    },
-    {
-      label: "신부 측",
-      bank: "우리은행",
-      number: "1002-123-456789",
-      name: "허지은"
-    }
+    { label: "신랑 측", bank: "국민은행", number: "123-456-789", name: "홍길동" },
+    { label: "신랑 측", bank: "신한은행", number: "111-222-333", name: "홍길동" },
+    { label: "신부 측", bank: "하나은행", number: "444-555-666", name: "김영희" },
+    { label: "신부 측", bank: "우리은행", number: "777-888-999", name: "김영희" },
   ];
 
   return (
