@@ -5,12 +5,10 @@ import {
   AccountHeader,
   AccountLabel,
   AccountMainTitle,
-  AccountName,
   AccountText,
-  AccountTitle,
   CopyButton,
   AccountItemBox,
-  AccountHolder, // 추가: 내부 박스를 위한 스타일
+  AccountHolder, 
 } from "../styles/AccountInfo.styles";
 
 type AccountProps = {
@@ -52,7 +50,6 @@ const AccountInfo = ({ accounts }: Props) => {
             <AccountBlock>
               <AccountLabel>{label}</AccountLabel>
 
-              {/* 내부 박스들 */}
               {accList.map((acc, index) => (
                 <AccountItemBox key={index}>
                   <AccountHeader>

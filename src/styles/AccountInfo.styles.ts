@@ -53,27 +53,11 @@ export const AccountItemBox = styled.div`
   box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 `;
 
-export const AccountTitle = styled.div`
-  font-family: 'Gowun Batang', serif;
-  font-size: clamp(15px, 1.5vw, 18px);
-  color: ${colors.mainColor};
-  font-weight: bold;
-  text-align: left;
-`;
-
 export const AccountText = styled.div`
   font-family: 'Gowun Batang', serif;
   color: #444;
   font-size: clamp(14px, 1.4vw, 17px);
   margin-bottom: 6px;
-  text-align: left;
-`;
-
-export const AccountName = styled.div`
-  font-family: 'Gowun Batang', serif;
-  color: #555;
-  font-size: clamp(14px, 1.3vw, 16px);
-  margin-bottom: 10px;
   text-align: left;
 `;
 
