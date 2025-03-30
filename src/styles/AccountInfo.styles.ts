@@ -1,5 +1,6 @@
 import styled from "@emotion/styled";
 import colors from "./colors";
+import fonts from "./fonts";
 
 // Styled Components
 export const AccountContainer = styled.div`
@@ -9,14 +10,14 @@ export const AccountContainer = styled.div`
 `;
 
 export const AccountMainTitle = styled.div`
-  font-family: 'Gowun Batang', serif;
+  font-family: ${fonts.korean};
   color: ${colors.mainColor};
   font-size: clamp(16px, 1.8vw, 20px);
   margin-bottom: 20px;
 `;
 
 export const AccountLabel = styled.div`
-  font-family: 'Gowun Batang', serif;
+  font-family: ${fonts.korean};
   color: ${colors.mainColor};
   font-size: clamp(16px, 1.8vw, 20px);
   margin-bottom: 20px;
@@ -54,7 +55,7 @@ export const AccountItemBox = styled.div`
 `;
 
 export const AccountText = styled.div`
-  font-family: 'Gowun Batang', serif;
+  font-family: ${fonts.korean};
   color: #444;
   font-size: clamp(14px, 1.4vw, 17px);
   margin-bottom: 6px;
@@ -67,7 +68,7 @@ export const CopyButton = styled.button`
   border: none;
   padding: 3px 10px;
   border-radius: 5px;
-  font-family: 'Gowun Batang', serif;
+  font-family: ${fonts.korean};
   cursor: pointer;
   transition: background-color 0.3s;
   font-size: clamp(12px, 1vw, 14px);
@@ -86,6 +87,6 @@ export const AccountHeader = styled.div`
 export const AccountHolder = styled.span`
   color: #6699cc;
   font-weight: bold;
-  font-family: 'Gowun Batang', serif;
+  font-family: ${fonts.korean};
   font-size: clamp(12px, 1vw, 14px);
 `;

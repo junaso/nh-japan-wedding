@@ -1,5 +1,6 @@
 import styled from "@emotion/styled";
 import colors from "./colors";
+import fonts from "./fonts";
 
 export const ShareButton = styled.button`
   background-color: ${colors.mainColor};
@@ -7,7 +8,7 @@ export const ShareButton = styled.button`
   border: none;
   padding: 3px 10px;
   border-radius: 5px;
-  font-family: 'Gowun Batang', serif;
+  font-family: ${fonts.korean};
   cursor: pointer;
   transition: background-color 0.3s;
   font-size: clamp(20px, 2vw, 25px);
@@ -23,7 +24,6 @@ export const ButtonContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
-  height: 100vh; /* 부모 높이 기준으로 정중앙 정렬 */
-  gap: 10px; /* 버튼 사이 간격 */
+  height: 100vh; 
+  gap: 10px;
 `;

@@ -79,7 +79,7 @@ export default function japanese() {
             </ImageSection>
             <TextSection>
               <TextChildJapn>
-                新郎 南　俊
+                新郎　南　俊
               </TextChildJapn>
               <TextParentsJapan>
                 南　元吉・林　景羅の長男
@@ -92,10 +92,10 @@ export default function japanese() {
             </ImageSection>
             <TextSection>
               <TextChildJapn>
-                新婦 許　智銀
+                新婦　許　智銀
               </TextChildJapn>
               <TextParentsJapan>
-                許　기행・金　순예 의 딸
+                許　基行・金　順禮の長女
               </TextParentsJapan>
             </TextSection>
           </TwoColumnSection>
@@ -109,6 +109,8 @@ export default function japanese() {
         </GallaryTitleJapan>
 
         <ImageGrid />
+
+        <Divider />
 
         <GallaryTitle>
           Mean Everything

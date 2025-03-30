@@ -5,7 +5,7 @@ import Wedding from "./pages/Wedding";
 import Japanese from "./pages/Japanese";
 
 const router = createBrowserRouter([
-  { path: "/", element: <Marriage /> },
+  { path: "/", element: <Japanese /> },
   { path: "/marriage", element: <Marriage /> },
   { path: "/wedding", element: <Wedding /> },
   { path: "/japanese", element: <Japanese /> },

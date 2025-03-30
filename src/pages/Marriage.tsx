@@ -27,7 +27,7 @@ export default function Marriage() {
   const accounts = [
     { label: "신랑 측", bank: "국민은행", number: "560-24-0208-691", name: "남원길" },
     { label: "신랑 측", bank: "농협은행", number: "637127-52-065415", name: "임경라" },
-    { label: "신부 측", bank: "국민은행", number: "430502-01048358", name: "허기행" },
+    { label: "신부 측", bank: "국민은행", number: "430502-01-048358", name: "허기행" },
     { label: "신부 측", bank: "우리은행", number: "110-053-652475", name: "김순예" },
   ];
 

@@ -1,5 +1,6 @@
 import styled from "@emotion/styled";
 import colors from "./colors";
+import fonts from "./fonts";
 
 export const Container = styled.div`
   display: flex;
@@ -17,7 +18,7 @@ export const ContentWrapper = styled.div`
 
 export const Title = styled.h1`
   color: #000;
-  font-family: "Gowun Batang", serif;
+  font-family: ${fonts.korean};
   font-size: clamp(20px, 4vw, 25px);
   text-align: center;
   margin-bottom: 20px;
@@ -46,7 +47,7 @@ export const VerticalText = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: "Gowun Batang", serif;
+  font-family: ${fonts.korean};
 
   &.left {
     writing-mode: vertical-lr;
@@ -100,7 +101,7 @@ export const OverlayText = styled.div`
   bottom: -8%;
   color: ${colors.mainColor};
   font-size: clamp(30px, 6vw, 50px);
-  font-family: 'Newsreader', serif;
+  font-family: ${fonts.english};
   font-weight: bold;
   text-align: center;
   line-height: 1.3;
@@ -116,7 +117,7 @@ export const SubTitle = styled.p`
   font-size: clamp(18px, 1.8vw, 24px);
   line-height: 1.6;
   padding: 0 5%;
-  font-family: "Gowun Batang", serif;
+  font-family: ${fonts.korean};
   margin-bottom: 10px; 
 `;
 
@@ -126,7 +127,7 @@ export const SubTitleJapan = styled.p`
   font-size: clamp(18px, 1.8vw, 24px);
   line-height: 1.6;
   padding: 0 5%;
-  font-family: "Newsreader", serif;
+  font-family: ${fonts.japanese};
   margin-bottom: 10px; 
 `;
 
@@ -136,7 +137,7 @@ export const TextBlock = styled.p`
   font-size: clamp(15px, 1.8vw, 18px);
   line-height: 1.6;
   padding: 0 5%;
-  font-family: "Gowun Batang", serif;
+  font-family: ${fonts.korean};
   margin-top: 0; 
   margin-bottom: 40px; 
 `;
@@ -149,7 +150,7 @@ export const TextBlockJapan = styled.p`
   padding: 0 5%;
   margin-top: 0; 
   margin-bottom: 40px; 
-  font-family: "Newsreader", serif;
+  font-family: ${fonts.japanese};
 `;
 
 export const SectionContainer = styled.div`
@@ -183,7 +184,7 @@ export const TextChild = styled.div`
   font-weight: bold;
   font-size: clamp(16px, 1.5vw, 18px);
   color: ${colors.mainColor};
-  font-family: "Gowun Batang", serif;
+  font-family: ${fonts.korean};
   margin-left: 10%;
 `;
 
@@ -192,7 +193,7 @@ export const TextChildJapn = styled.div`
   font-weight: bold;
   font-size: clamp(16px, 1.5vw, 18px);
   color: ${colors.mainColor};
-  font-family: "Newsreader", serif;
+  font-family: ${fonts.japanese};
   margin-left: 10%;
 `;
 
@@ -200,7 +201,7 @@ export const TextParents = styled.div`
   text-align: left;
   font-size: clamp(14px, 1.3vw, 16px);
   color: #444;
-  font-family: "Gowun Batang", serif;
+  font-family: ${fonts.korean};
   margin-left: 10%;
 `;
 
@@ -208,12 +209,12 @@ export const TextParentsJapan = styled.div`
   text-align: left;
   font-size: clamp(14px, 1.3vw, 16px);
   color: #444;
-  font-family: "Newsreader", serif;
+  font-family: ${fonts.japanese};
   margin-left: 10%;
 `;
 
 export const GallaryTitle = styled.div`
-  font-family: 'Gowun Batang', serif;
+  font-family: ${fonts.korean};
   font-size: clamp(18px, 2vw, 22px);
   color: ${colors.mainColor};
   text-align: center;
@@ -221,7 +222,7 @@ export const GallaryTitle = styled.div`
 `;
 
 export const GallaryTitleJapan = styled.div`
-  font-family: "Newsreader", serif;
+  font-family: ${fonts.japanese};
   font-size: clamp(18px, 2vw, 22px);
   color: ${colors.mainColor};
   text-align: center;
@@ -232,7 +233,7 @@ export const FooterCopyright = styled.div`
   font-size: 14px;
   color: #aaa;
   text-align: center;
-  font-family: 'Gowun Batang', serif;
+  font-family: ${fonts.korean};
   margin: 10px 0 20px;
 `;
 
