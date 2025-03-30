@@ -168,7 +168,7 @@ export const TextChild = styled.div`
 
 export const TextParents = styled.div`
   text-align: left;
-  font-size: clamp(16px, 1.5vw, 18px);
+  font-size: clamp(14px, 1.3vw, 16px);
   color: #444;
   font-family: "Gowun Batang", serif;
   margin-left: 10%;
