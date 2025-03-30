@@ -120,6 +120,16 @@ export const SubTitle = styled.p`
   margin-bottom: 10px; 
 `;
 
+export const SubTitleJapan = styled.p`
+  text-align: left;
+  color: ${colors.mainColor};
+  font-size: clamp(18px, 1.8vw, 24px);
+  line-height: 1.6;
+  padding: 0 5%;
+  font-family: "Newsreader", serif;
+  margin-bottom: 10px; 
+`;
+
 export const TextBlock = styled.p`
   text-align: left;
   color: #444;
@@ -129,6 +139,17 @@ export const TextBlock = styled.p`
   font-family: "Gowun Batang", serif;
   margin-top: 0; 
   margin-bottom: 40px; 
+`;
+
+export const TextBlockJapan = styled.p`
+  text-align: left;
+  color: #444;
+  font-size: clamp(15px, 1.8vw, 18px);
+  line-height: 1.6;
+  padding: 0 5%;
+  margin-top: 0; 
+  margin-bottom: 40px; 
+  font-family: "Newsreader", serif;
 `;
 
 export const SectionContainer = styled.div`
@@ -166,6 +187,15 @@ export const TextChild = styled.div`
   margin-left: 10%;
 `;
 
+export const TextChildJapn = styled.div`
+  text-align: left;
+  font-weight: bold;
+  font-size: clamp(16px, 1.5vw, 18px);
+  color: ${colors.mainColor};
+  font-family: "Newsreader", serif;
+  margin-left: 10%;
+`;
+
 export const TextParents = styled.div`
   text-align: left;
   font-size: clamp(14px, 1.3vw, 16px);
@@ -174,8 +204,24 @@ export const TextParents = styled.div`
   margin-left: 10%;
 `;
 
+export const TextParentsJapan = styled.div`
+  text-align: left;
+  font-size: clamp(14px, 1.3vw, 16px);
+  color: #444;
+  font-family: "Newsreader", serif;
+  margin-left: 10%;
+`;
+
 export const GallaryTitle = styled.div`
   font-family: 'Gowun Batang', serif;
+  font-size: clamp(18px, 2vw, 22px);
+  color: ${colors.mainColor};
+  text-align: center;
+  margin: 20px 0;
+`;
+
+export const GallaryTitleJapan = styled.div`
+  font-family: "Newsreader", serif;
   font-size: clamp(18px, 2vw, 22px);
   color: ${colors.mainColor};
   text-align: center;
