@@ -3,8 +3,8 @@ import Marriage from "./pages/Marriage";
 import Share from "./pages/Share";
 
 const router = createBrowserRouter([
-  { path: "/ ", element: <Marriage /> },
-  { path: "/marriage ", element: <Marriage /> },
+  { path: "/", element: <Marriage /> },
+  { path: "/marriage", element: <Marriage /> },
   { path: "/share", element: <Share /> },
 ]);
 

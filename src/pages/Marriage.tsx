@@ -22,7 +22,7 @@ import {
 import ImageGrid from "../components/Gallery";
 import AccountInfo from "../components/AccountInfo";
 
-export default function Home() {
+export default function Marriage() {
 
   const accounts = [
     { label: "신랑 측", bank: "국민은행", number: "560-24-0208-691", name: "남원길" },
