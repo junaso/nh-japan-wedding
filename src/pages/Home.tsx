@@ -48,7 +48,7 @@ export default function Home() {
           <VerticalText className="left">2025.05.16. 1:00 P.M. Tokyo</VerticalText>
           <ImageBlock>
             <ImageWrapper>
-              <img src="/main_01.JPG" alt="Nam Jun & Heo Jieun" />
+              <img src="/main_01.jpg" alt="Nam Jun & Heo Jieun" />
             </ImageWrapper>
             <OverlayText>
               <span>MOMENTS</span>
