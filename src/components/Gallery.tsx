@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { CloseButton, GridImage, GridSection, ModalImage, ModalOverlay, NavButton } from "../styles/Gallery.styles";
 
 const images = [
@@ -62,6 +62,18 @@ export default function ImageGrid() {
     touchStartX.current = null;
     touchEndX.current = null;
   };
+
+  useEffect(() => {
+    if (selectedIndex !== null) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+
+    return () => {
+      document.body.style.overflow = 'auto'; // 컴포넌트 unmount 시 복구
+    };
+  }, [selectedIndex]);
 
   return (
     <>
