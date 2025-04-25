@@ -35,7 +35,7 @@ export const ImageContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto 90px; 
+  margin: 0 auto 80px; 
 `;
 
 export const VerticalText = styled.div`
@@ -223,7 +223,7 @@ export const GallaryTitle = styled.div`
 
 export const SpaceAndDate = styled.div`
   font-family: ${fonts.korean};
-  font-size: clamp(18px, 2vw, 22px);
+  font-size: clamp(15px, 2vw, 19px);
   text-align: center;
   margin: 20px 0;
 `;

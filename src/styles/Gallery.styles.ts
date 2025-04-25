@@ -2,21 +2,20 @@ import styled from "@emotion/styled";
 
 export const NavButton = styled.button<{ position: "left" | "right" }>`
   position: absolute;
-  top: 50%;
+  bottom: 30px;
   ${({ position }) => position}: 20px;
-  transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0.5);
+  background: transparent; /* ⬅️ 배경 투명하게 */
   color: white;
   border: none;
-  font-size: 2rem;
+  font-size: 2.5rem; /* ⬅️ 화살표 더 눈에 띄게 */
   cursor: pointer;
   z-index: 10;
-  padding: 0.5rem 1rem;
-  border-radius: 50%;
+  padding: 0; /* ⬅️ 여백 없애기 */
   user-select: none;
+  transform: none;
 
   &:hover {
-    background: rgba(0, 0, 0, 0.7);
+    color: #ddd; /* ⬅️ hover할 때 살짝 색만 바꿔 */
   }
 `;
 
