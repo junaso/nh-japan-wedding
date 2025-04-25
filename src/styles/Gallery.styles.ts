@@ -1,5 +1,25 @@
 import styled from "@emotion/styled";
 
+export const NavButton = styled.button<{ position: "left" | "right" }>`
+  position: absolute;
+  top: 50%;
+  ${({ position }) => position}: 20px;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 10;
+  padding: 0.5rem 1rem;
+  border-radius: 50%;
+  user-select: none;
+
+  &:hover {
+    background: rgba(0, 0, 0, 0.7);
+  }
+`;
+
 export const GridSection = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);

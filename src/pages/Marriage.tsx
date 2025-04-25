@@ -18,6 +18,7 @@ import {
   TextSection,
   GallaryTitle,
   FooterCopyright,
+  SpaceAndDate,
 } from "../styles/Home.styles";
 import ImageGrid from "../components/Gallery";
 import AccountInfo from "../components/AccountInfo";
@@ -49,6 +50,11 @@ export default function Marriage() {
           </ImageBlock>
           <VerticalText className="right">Our wedding day</VerticalText>
         </ImageContainer>
+
+        <SpaceAndDate>
+          2025년 05월 16일 금요일 오후 1시<br />
+          일본, 도쿄의 Jam Orchestra ichigaya<br />
+        </SpaceAndDate>
 
         <Divider />
 

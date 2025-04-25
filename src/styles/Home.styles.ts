@@ -221,6 +221,13 @@ export const GallaryTitle = styled.div`
   margin: 20px 0;
 `;
 
+export const SpaceAndDate = styled.div`
+  font-family: ${fonts.korean};
+  font-size: clamp(18px, 2vw, 22px);
+  text-align: center;
+  margin: 20px 0;
+`;
+
 export const RegretMassage = styled.div`
   font-family: ${fonts.korean};
   font-size: clamp(14px, 1.6vw, 18px);

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { CloseButton, GridImage, GridSection, ModalImage, ModalOverlay } from "../styles/Gallery.styles";
+import { CloseButton, GridImage, GridSection, ModalImage, ModalOverlay, NavButton } from "../styles/Gallery.styles";
 
 const images = [
   "/sea_01.jpg",
@@ -20,7 +20,26 @@ const images = [
 ];
 
 export default function ImageGrid() {
-  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
+
+  const handleNext = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    if (selectedIndex !== null) {
+      setSelectedIndex((selectedIndex + 1) % images.length);
+    }
+  };
+
+  const handlePrev = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    if (selectedIndex !== null) {
+      setSelectedIndex((selectedIndex - 1 + images.length) % images.length);
+    }
+  };
+
+  const handleClose = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    setSelectedIndex(null);
+  };
 
   return (
     <>
@@ -30,15 +49,17 @@ export default function ImageGrid() {
             key={index}
             src={src}
             alt={`gallery_${index + 1}`}
-            onClick={() => setSelectedImage(src)}
+            onClick={() => setSelectedIndex(index)}
           />
         ))}
       </GridSection>
 
-      {selectedImage && (
-        <ModalOverlay onClick={() => setSelectedImage(null)}>
-          <CloseButton onClick={() => setSelectedImage(null)}>×</CloseButton>
-          <ModalImage src={selectedImage} alt="selected" />
+      {selectedIndex !== null && (
+        <ModalOverlay onClick={handleClose}>
+          <CloseButton onClick={handleClose}>×</CloseButton>
+          <NavButton onClick={handlePrev} position="left">‹</NavButton>
+          <ModalImage src={images[selectedIndex]} alt="selected" />
+          <NavButton onClick={handleNext} position="right">›</NavButton>
         </ModalOverlay>
       )}
     </>
