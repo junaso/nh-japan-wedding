@@ -59,11 +59,12 @@ export const ModalImage = styled.img`
 
 export const CloseButton = styled.button`
   position: absolute;
-  top: 30px;
-  right: 30px;
-  font-size: 40px;
+  top: 10px; 
+  right: 20px; 
+  font-size: 36px;
   background: transparent;
   color: white;
   border: none;
   cursor: pointer;
+  z-index: 1000; 
 `;

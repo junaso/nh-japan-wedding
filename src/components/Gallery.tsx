@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { CloseButton, GridImage, GridSection, ModalImage, ModalOverlay, NavButton } from "../styles/Gallery.styles";
 
 const images = [
@@ -21,24 +21,46 @@ const images = [
 
 export default function ImageGrid() {
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
+  const touchStartX = useRef<number | null>(null);
+  const touchEndX = useRef<number | null>(null);
 
-  const handleNext = (e: React.MouseEvent) => {
-    e.stopPropagation();
+  const handleNext = (e?: React.MouseEvent | React.TouchEvent) => {
+    e?.stopPropagation();
     if (selectedIndex !== null) {
       setSelectedIndex((selectedIndex + 1) % images.length);
     }
   };
 
-  const handlePrev = (e: React.MouseEvent) => {
-    e.stopPropagation();
+  const handlePrev = (e?: React.MouseEvent | React.TouchEvent) => {
+    e?.stopPropagation();
     if (selectedIndex !== null) {
       setSelectedIndex((selectedIndex - 1 + images.length) % images.length);
     }
   };
 
-  const handleClose = (e: React.MouseEvent) => {
+  const handleClose = (e: React.MouseEvent | React.TouchEvent) => {
     e.stopPropagation();
     setSelectedIndex(null);
+  };
+
+  const handleTouchStart = (e: React.TouchEvent) => {
+    touchStartX.current = e.changedTouches[0].clientX;
+  };
+
+  const handleTouchEnd = (e: React.TouchEvent) => {
+    touchEndX.current = e.changedTouches[0].clientX;
+    if (touchStartX.current !== null && touchEndX.current !== null) {
+      const distance = touchStartX.current - touchEndX.current;
+      if (distance > 50) {
+        // 왼쪽으로 스와이프 → 다음 사진
+        handleNext();
+      } else if (distance < -50) {
+        // 오른쪽으로 스와이프 → 이전 사진
+        handlePrev();
+      }
+    }
+    touchStartX.current = null;
+    touchEndX.current = null;
   };
 
   return (
@@ -55,7 +77,11 @@ export default function ImageGrid() {
       </GridSection>
 
       {selectedIndex !== null && (
-        <ModalOverlay onClick={handleClose}>
+        <ModalOverlay
+          onClick={handleClose}
+          onTouchStart={handleTouchStart}
+          onTouchEnd={handleTouchEnd}
+        >
           <CloseButton onClick={handleClose}>×</CloseButton>
           <NavButton onClick={handlePrev} position="left">‹</NavButton>
           <ModalImage src={images[selectedIndex]} alt="selected" />
